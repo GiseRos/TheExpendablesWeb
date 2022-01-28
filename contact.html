@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This a website dedicated to 'The Expendables' movies. Made with respect and love.">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" href="./assets/icons/circular-target-sniper-svgrepo-com.svg">
     <link rel="stylesheet" href="./style.css">
     <title>The Expendables</title>
@@ -11,15 +17,62 @@
 
 <body>
     <header>
-        <div class="navBar">
-            <img class="logo" src="./assets/images/pixlr-bg-result.png" alt="logo" >
+        <a class="beggining" href="./index.html">
+            <img class="logo" src="./assets/images/pixlr-bg-result.png" alt="the-expendables-logo">
             <h1>THE EXPENDABLES</h1>
-            <a href="index.html"></a>
-        </div>    
-               
-        <nav>
-            <a href="">About us</a>
-            <a href="./contact.html">Contact</a>
+        </a>
+        <!--NavBar Small Devices -->
+        <nav class="menu">
+            <i class="fas fa-bars"></i>
+            <ul class="dropdown">
+                <a href="#">
+                    <li>About us</li>
+                </a>
+                <a href="#">
+                    <li>Blog</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
         </nav>
     </header>
+
+    <form action="">
+        <div class="form-container">
+            <h2>DO YOU NEED TO SPEAK WITH US?</h2>
+            <label for="name">
+                <h3>Name:</h3>
+                <input type="text"name="name" id="name" placeholder="Name" required>
+            </label>
+
+            <label for="surname">
+                <h3>Surname:</h3>
+                <input type="text" name="surname" id="surname" placeholder="Surname" required>
+            </label>
+
+            <label for="phone">
+                <h3>Phone:</h3>
+                <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+            </label>
+
+            <label for="email">
+                <h3>E-mail address:</h3>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </label>
+            <label for="inquiry">
+                <h3 class="inquiry">Your inquiry:</h3>
+                <textarea name="inquiry" id="inquiry" cols="30" rows="10">Write your inquiry</textarea>
+            </label>
+
+            <label for="submit">
+                <input class="submit" type="submit" value="Submit">
+            </label>
+
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
+</html>
