@@ -292,6 +292,10 @@ input, textarea{
 }
 
 /*login form*/
+.one-form{
+    display: block;
+}
+
 .login img{
     margin: auto;
     display: block;
