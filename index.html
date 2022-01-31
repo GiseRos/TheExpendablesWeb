@@ -25,10 +25,19 @@
         <nav class="menu">
             <i class="fas fa-bars"></i>
             <ul class="dropdown">
-                <a href="#">
-                    <li>About us</li>
+                <a href="./login.html">
+                    <li>Blog</li>
                 </a>
-                <a href="#">
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- NavBar Big Devices -->
+        <nav class="nav-bar">
+            <ul class="nav">
+                <a href="./login.html">
                     <li>Blog</li>
                 </a>
                 <a href="./contact.html">
@@ -50,36 +59,35 @@
             <h2>MISSIONS</h2>
             <blockquote class="missions">"Age is just the state of mind, your only get old when you surrender, when you
                 give up."</blockquote>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+                data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <iframe src="https://www.youtube.com/embed/8KtYRALe-xo" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/ip_CYHdyUBs" title="YouTube video player"
-                            frameborder="0"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8KtYRALe-xo"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                            allowfullscreen></iframe>
                     </div>
                     <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/sTte6BQndTQ" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ip_CYHdyUBs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sTte6BQndTQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -87,101 +95,81 @@
             </div>
         </section>
 
-        <section class="strenghts">
-            <h2>OUR STRENGTHS</h2>
-            <div class="strenghts-container">
-                <div class="strenght">
-                    <img src="./assets/icons/secure.ico" alt="">
-                    <h3>Responsability</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe eius modi cum accusamus
-                        quod illum excepturi, placeat atque, itaque architecto tenetur error sed quasi sunt quis,
-                        recusandae ea dolorum.</p>
-                </div>
-
-                <div class="strenght">
-                    <img src="./assets/icons/pistol.ico" alt="">
-                    <h3>Discretion</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe eius modi cum accusamus
-                        quod illum excepturi, placeat atque, itaque architecto tenetur error sed quasi sunt quis,
-                        recusandae ea dolorum.</p>
-                </div>
-
-                <div class="strenght">
-                    <img src="./assets/icons/target.ico" alt="">
-                    <h3>Eficiency</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe eius modi cum accusamus
-                        quod illum excepturi, placeat atque, itaque architecto tenetur error sed quasi sunt quis,
-                        recusandae ea dolorum.</p>
-                </div>
-
-                <div class="strenght">
-                    <img src="./assets/icons/globe.ico" alt="">
-                    <h3>Global Service</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe eius modi cum accusamus
-                        quod illum excepturi, placeat atque, itaque architecto tenetur error sed quasi sunt quis,
-                        recusandae ea dolorum.</p>
-                </div>
-            </div>
-
-        </section>
-
         <section class="opinions">
             <h2>OPINIONS</h2>
 
             <div class="cards">
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location5.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
-                </div>            
-                <div class="card" style="width: 8rem;">
+                </div>
+                <div class="card">
                     <img src="./assets/images/location6.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae. </blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae. </blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location7.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
-                <div class="card" style="width: 8rem;">
+                <div class="card">
                     <img src="./assets/images/location8.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fuga eligendi
+                            doloribus asperiores nam corporis fugiat reiciendis a incidunt cum, voluptate et. Delectus
+                            et tenetur recusandae omnis aperiam, nihil molestiae?</blockquote>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="final">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6509164.138130225!2d-123.7986047141304!3d37.19303670010993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1643380932219!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6509164.138130225!2d-123.7986047141304!3d37.19303670010993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1643380932219!5m2!1ses!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             <div class="information">
                 <i class="fas fa-map-marker-alt"></i>

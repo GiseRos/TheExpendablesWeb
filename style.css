@@ -21,9 +21,8 @@ body{
 
 h1, h2{
     font-family: 'Anton', sans-serif;
-    color: var(--main-dark);
 }
-
+ 
 h2{
     font-size: 1.2em;
     text-align: start;
@@ -67,13 +66,14 @@ img.logo{
     display: inline-block;
 }
 
-h1{
+header a h1{
     font-size: 2em;
     display: inline-block;
     padding-left: 4px;
+    color: var(--main-dark);
 }
 
-h1:hover{
+header a h1:hover{
     color: var(--main-medium);
     cursor: pointer;
 }
@@ -112,6 +112,7 @@ h1:hover{
 .dropdown li{
     list-style: none;
     font-size: 0.8em;
+    font-weight: 600;
 }
 
 .dropdown li:hover{
@@ -119,6 +120,9 @@ h1:hover{
     color: var(--main-lighter);
 }
 
+.nav-bar{
+    display: none;
+}
 /*main*/
 /*presentation*/
 .presentation{
@@ -127,7 +131,8 @@ h1:hover{
 }
 
 img.team{
-    width: 270px;
+    width: 290px;
+    height: 180px;
     margin: auto;
     display: block;
     padding-bottom: 3%;
@@ -142,8 +147,8 @@ img.team{
 .missions iframe{
     margin: auto;
     display: block;
-    width: 500px;
-    height: 200px;
+    width: 330px;
+    height: 220px;
 }
 
 /*advantages*/
@@ -152,9 +157,6 @@ img.team{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    padding: 2%;
 }
 
 .strenght{
@@ -189,6 +191,7 @@ img.team{
 }
 
 .card{
+    width: 8rem;
     height: 220px;
     margin: 1%;
 }
@@ -228,8 +231,8 @@ iframe{
 /*footer*/
 footer{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-end;
+    padding-right: 1%;
     width: 100%;
     height: 20px;
     margin: 0;
@@ -238,39 +241,46 @@ footer{
     font-size: 0.8em;
 }
 
-/*form*/
+/*contact form*/
+.one-form{
+    display: none;
+}
+
 .form-container{
     background-color: var(--main-light);
     display: flex;
     flex-direction: column;
     padding: 5%;
     margin: 10%;
-    justify-content: center;
-    align-items: center;
 }
 
 label{
     display: block;
 }
 
-label h3, .inquiry{
+label h3, .inquiry, a h3, input, textarea{
     font-size: 0.8em;
     margin-bottom: 1%;
+    font-weight: 600;
+    text-align: center;
+    color: var(--main-dark);
 }
 
-.form-container h2{
+.form-container h2, .form-container2 h2{
     text-align: center;
     font-size: 1.5em;
 }
 
 input, textarea{
-    width: 150px;
+    width: 180px;
     background-color: var(--main-lighter);
     border: solid var(--main-lighter) 1px;
     border-radius: 5px;
     text-align: center;
-    font-size: 0.7em;
     cursor: pointer;
+    margin: auto;
+    display: block;
+    margin-bottom: 5%;
 }
 
 .submit{
@@ -279,4 +289,275 @@ input, textarea{
     width: 100px;
     border: none;
     box-shadow: 2px -2px var(--main-lighter);
+}
+
+/*login form*/
+.login img{
+    margin: auto;
+    display: block;
+    width: 120px;
+}
+
+.login a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*mediaqueries*/
+@media screen and (min-width: 321px) and (max-width: 480px){
+    h2{
+        font-size: 1.7em;
+    }
+
+    blockquote{
+        font-size: 1em;
+    }
+
+    img.logo{
+        width: 50px;
+    }
+
+    header a h1{
+        font-size: 2.5em;
+    }
+
+    .dropdown li{
+        font-size: 1.2em;
+    }
+
+    img.team{
+        width: 400px;
+        height: 230px;
+    }
+
+    .missions iframe{
+        width: 400px;
+        height: 250px;
+    }
+
+    .form-container h2, .form-container2 h2{
+    text-align: center;
+    font-size: 2em;
+    }
+
+    label h3, .inquiry, a h3, input, textarea {
+    font-size: 1.3em;
+    }
+
+    .login img{
+    width: 150px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    h2{
+        font-size: 2.5em;
+    }
+
+    blockquote{
+        font-size: 1.7em;
+    }
+
+    img.logo{
+        width: 70px;
+    }
+
+    header a h1{
+        font-size: 3em;
+    }
+
+    .dropdown{
+    width: 100px;
+    padding: 8px 8px;
+    right: -4px;
+}
+
+    .dropdown li{
+        font-size: 1.8em;
+    }
+
+    .menu i{
+        font-size: 2.5em;
+    }
+
+    img.team{
+        width: 700px;
+        height: 400px;
+    }
+
+    .missions iframe{
+        width: 600px;
+        height: 350px;
+    }
+
+    .contact{
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        margin: 10%;
+    }
+
+    .one-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .form-container{
+        padding: 5%;
+        margin: 1%;
+    }
+
+    .form-container h2, .form-container2 h2{
+        text-align: center;
+        font-size: 2em;
+    }
+
+    label h3, .inquiry, a h3, input, textarea {
+        font-size: 1.3em;
+    }
+
+    input, textarea{
+        width: 280px;
+    }
+
+    .login img{
+    width: 150px;
+    }
+
+    .card{
+        width: 13rem;
+        height: 370px;
+    }
+
+    .card blockquote{
+        font-size: 1em;
+    }
+
+    .information i, .information address, .information a{
+        font-size: 1.5em;
+    }
+
+    iframe{
+        width: 250px;
+        height: 200px;
+    }
+
+    footer{
+        font-size: 2.2em;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1920px){
+    h2{
+        font-size: 4em;
+    }
+
+    blockquote{
+        font-size: 2.2em;
+    }
+
+    img.logo{
+        width: 80px;
+    }
+
+    header a h1{
+        font-size: 5em;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-bar a{
+        list-style: none;
+        text-decoration: none;
+        color: var(--main-medium);
+        font-size: 2em;
+    }
+
+    .nav-bar li{
+        padding-right: 20px;
+    }
+
+    img.team{
+        width: 900px;
+        height: 500px;
+    }
+
+    .missions iframe{
+        width: 900px;
+        height: 600px;
+    }
+
+    .contact{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .one-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .form-container{
+        padding: 5%;
+        margin: 5px;
+    }
+
+    .form-container h2, .form-container2 h2{
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    label h3, .inquiry, a h3, input, textarea {
+        font-size: 1em;
+    }
+
+    input, textarea{
+        width: 200px;
+    }
+
+    .submit{
+        width: 100px;
+    }
+
+    .login img{
+    width: 150px;
+    }
+
+    .card{
+        width: 25rem;
+        height: 480px;
+    }
+
+    .card blockquote{
+        font-size: 1.3em;
+    }
+
+    .information i, .information address, .information a{
+        font-size: 1.5em;
+    }
+
+    iframe{
+        width: 400px;
+        height: 200px;
+    }
+
+    footer{
+        font-size: 1.5em;
+        height: 40px;
+    }
 }
