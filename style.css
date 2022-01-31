@@ -330,13 +330,13 @@ input, textarea{
     }
 
     img.team{
-        width: 400px;
-        height: 230px;
+        width: 250px;
+        height: 150px;
     }
 
     .missions iframe{
-        width: 400px;
-        height: 250px;
+        width: 250px;
+        height: 150px;
     }
 
     .form-container h2, .form-container2 h2{
