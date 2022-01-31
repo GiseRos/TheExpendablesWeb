@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow&family=Roboto+Condensed:wght@300&display=swap');
+
+:root{
+    --main-dark: #2c1919;
+    --main-medium: #a53737;
+    --main-light: #d68376;
+    --main-lighter: #E4E0E0;
+}
+
+/*resets*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*generals*/
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--main-lighter);
+    h1, h2{
+        font-family: 'Anton', sans-serif;
+    }
+    h2{
+        font-size: 1.2em;
+        text-align: start;
+        color: var(--main-medium);
+    }
+    blockquote{
+        font-size: 0.9em;
+        text-align: center;
+    }
+    section{
+        background-color: #dbd7d7be;
+        padding: 3% 3% 2% 3%;
+        margin: 2% 2%;
+    }
+}
+
+/*header*/
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #dbd7d7be;
+    z-index: 10;
+    padding: 0.5em;
+    a.beggining{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        img.logo{
+            width: 40px;
+            display: inline-block;
+        }
+        h1{
+            font-size: 2em;
+            display: inline-block;
+            padding-left: 4px;
+            color: var(--main-dark);
+            &:hover{
+                color: var(--main-medium);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+    /*NavBarSmall Viewports*/
+.menu{
+    position: relative;
+    display: inline-block;
+    padding-right: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    .dropdown{
+        display: none;
+        position: absolute;
+        background-color: #dbd7d7be;
+        width: 80px;
+        padding: 8px 8px;
+        z-index: 10;
+        right: -7px;
+    }
+    ul a{
+        text-decoration: none;   
+        color: var(--main-medium);
+    }
+    i{
+        font-size: 1.5em;
+        color: var(--main-medium);
+    }
+    li{
+        list-style: none;
+        font-size: 0.8em;
+        &:hover{
+            background-color: var(--main-medium);
+            color: var(--main-lighter);
+        }
+    }
+}
+.menu:hover .dropdown{
+    display: block;
+}
+
+/*NavBar Large Viewports*/
+.nav-bar{
+    display: none;
+}
+
+/*main*/
+/*presentation*/
+.presentation{
+    display: flex;
+    flex-direction: column;
+    img.team{
+        width: 250px;
+        height: 150px;
+        margin: auto;
+        display: block;
+        padding-bottom: 3%;
+    }
+}
+
+/*missions*/
+.missions{
+    display: flex;
+    flex-direction: column;
+    iframe{
+        margin: auto;
+        display: block;
+        width: 250px;
+        height: 150px;
+    }
+}
+
+/*strenghts*/
+.strenghts-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .strenght{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        img{
+            display: block;
+            margin: auto;
+            width: 20px;
+        }
+        h3{
+            font-size: 0.6em;
+            text-align: center;
+        }
+        p{
+            font-size: 0.5em;
+        }
+    }
+}
+
+/*opinions*/
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .card{
+        width: 8rem;
+        height: 220px;
+        margin: 1%;
+        blockquote{
+            font-size: 0.5em;
+        }
+    }
+}
+
+/*information*/
+.final{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    background-color: var(--main-medium);
+    justify-content: space-around;
+    iframe{
+        width: 140px;
+        height: 100px;
+    }
+    .information i, .information address, .information a{
+        font-size: 0.5em;
+        display: inline;
+        text-decoration: none;
+        color: var(--main-lighter);
+        cursor: pointer;
+    }
+    .information a:hover{
+        color: var(--main-dark);
+    }
+}
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    background-color: #2c1919da;
+    color: var(--main-lighter);
+    font-size: 0.8em;
+}
+
+/*contact form*/
+.form-container{
+    background-color: var(--main-light);
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin: 10%;
+    label{
+        display: block;
+        input{
+            width: 180px;
+            background-color: var(--main-lighter);
+            border: solid var(--main-lighter) 1px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            margin: auto;
+            display: block;
+        }
+        .submit{
+            background-color: var(--main-medium);
+            color: var(--main-lighter);
+            width: 100px;
+            border: none;
+            box-shadow: 2px -2px var(--main-lighter);
+            margin-top: 10%;
+        }
+        textarea{
+            width: 180px;
+            background-color: var(--main-lighter);
+            border: solid var(--main-lighter) 1px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            margin: auto;
+            display: block;
+        }
+    }
+    label h3, .inquiry, a h3, input, textarea{
+        font-size: 0.8em;
+        margin-bottom: 1%;
+        text-align: center;
+        color: var(--main-dark);
+    }
+}
+
+.one-form{
+    display: none;
+}
+
+.form-container h2, .form-container2 h2{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*login form*/
+.one-form{
+    display: block;
+}
+
+.login img{
+    margin: auto;
+    display: block;
+    width: 120px;
+}
+
+.login a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*mediaqueries*/
+@media screen and (min-width: 321px) and (max-width: 480px){
+    //Generals//
+    body h2{
+        font-size: 1.7em;
+    }
+    body blockquote{
+        font-size: 1em;
+    }
+    //Header//
+    header a.beggining img.logo{
+        width: 50px;
+    }
+    header a.beggining h1{
+        font-size: 2.5em;
+    }
+    //NavBar//
+    .menu li{
+        font-size: 1.2em;
+    }
+    //Presentation//
+    .presentation img.team{
+        width: 300px;
+        height: 200px;
+    }
+    //Misions//
+    .missions iframe{
+        width: 300px;
+        height: 200px;
+    }
+    //Strenghts//
+    .strenghts-container .strenght img {
+        width: 30px;
+    }
+    .strenghts-container .strenght h3 {
+        font-size: 1em;
+    }
+    .strenghts-container .strenght p {
+        font-size: 0.7em;
+    }
+    //Forms//
+    .form-container h2, .form-container2 h2{
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
+        font-size: 1.3em;
+    }
+
+    .login img{
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    //Generals//
+    body h2{
+        font-size: 2.5em;
+    }
+    body blockquote{
+        font-size: 1.7em;
+    }
+    //Header//
+    header a.beggining img.logo{
+        width: 70px;
+    }
+    header a.beggining h1{
+        font-size: 3em;
+    }
+    //NavBar//
+    .menu .dropdown{
+    width: 100px;
+    padding: 8px 8px;
+    right: -4px;
+    }
+    .menu li{
+        font-size: 1.8em;
+    }
+    .menu i{
+        font-size: 2.5em;
+    }
+    //Presentation//
+    .presentation img.team{
+        width: 600px;
+        height: 380px;
+    }
+    //Missions//
+    .missions iframe{
+        width: 600px;
+        height: 350px;
+    }
+    //Strenghts//
+    .strenghts-container .strenght img {
+        width: 50px;
+    }
+    .strenghts-container .strenght h3 {
+        font-size: 1.5em;
+    }
+    .strenghts-container .strenght p {
+        font-size: 1em;
+    }
+    //Cards//
+    .cards .card{
+        width: 13rem;
+        height: 370px;
+    }
+    .cards .card blockquote{
+        font-size: 1em;
+    }
+    //Information//
+    .final .information i, .final .information address, .final .information a{
+        font-size: 1.5em;
+    }
+    .final iframe{
+        width: 250px;
+        height: 200px;
+    }
+    //Footer//
+    footer{
+        font-size: 1.5em;
+        height: 30px;
+    }
+    //Forms//
+    .contact{
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        display: block;
+    }
+    .one-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .form-container{
+        padding: 3%;
+    }
+    .form-container h2, .form-container2 h2{
+        text-align: center;
+        font-size: 2em;
+    }
+    .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea{
+        font-size: 1.3em;
+    }
+    .form-container label input, .form-container label textarea{
+        width: 280px;
+    }
+    .login img{
+    width: 150px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1920px){
+    //Generals//
+    body h2{
+        font-size: 4em;
+    }
+    body blockquote{
+        font-size: 2.2em;
+    }
+    //Header//
+   header a.beggining img.logo{
+        width: 80px;
+    }
+    header a.beggining h1{
+        font-size: 5em;
+    }
+    //NavBar//
+    .menu{
+        display: none;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: var(--main-medium);
+            font-size: 2em;
+        }
+        li{
+            padding-right: 20px;
+        }
+    }
+    //Presentation//
+    .presentation img.team{
+        width: 900px;
+        height: 500px;
+    }
+    .missions iframe{
+        width: 900px;
+        height: 600px;
+    }
+    //Strenghts//
+    .strenghts-container .strenght img {
+        width: 100px;
+    }
+    .strenghts-container .strenght h3 {
+        font-size: 2.8em;
+    }
+        .strenghts-container .strenght p {
+        font-size: 1.8em;
+    }
+    //Cards//
+    .cards .card{
+        width: 25rem;
+        height: 500px;
+    }
+    .cards .card blockquote{
+        font-size: 1.4em;
+    }
+    //Information//
+    .final .information i, .final .information address, .final .information a{
+        font-size: 2em;
+    }
+    .final iframe{
+        width: 400px;
+        height: 200px;
+    }
+    //Footer//
+    footer{
+        font-size: 1.5em;
+        height: 30px;
+    }
+    //Form//
+    .contact{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .one-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .form-container{
+        padding: 5%;
+        margin: 5px;
+    }
+
+    .form-container h2, .form-container2 h2{
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
+        font-size: 1em;
+    }
+
+    .form-container input, .form-container textarea{
+        width: 200px;
+    }
+
+    .form-container label .submit{
+        width: 100px;
+    }
+
+    .login img{
+    width: 150px;
+    }
+
+    
+
+    
+
+    
+}

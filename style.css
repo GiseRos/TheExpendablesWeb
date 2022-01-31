@@ -1,567 +1,637 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow&family=Roboto+Condensed:wght@300&display=swap');
-
-:root{
-    --main-dark: #2c1919;
-    --main-medium: #a53737;
-    --main-light: #d68376;
-    --main-lighter: #E4E0E0;
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow&family=Roboto+Condensed:wght@300&display=swap");
+:root {
+  --main-dark: #2c1919;
+  --main-medium: #a53737;
+  --main-light: #d68376;
+  --main-lighter: #E4E0E0;
 }
 
 /*resets*/
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /*generals*/
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: var(--main-lighter);
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--main-lighter);
 }
 
-h1, h2{
-    font-family: 'Anton', sans-serif;
-}
- 
-h2{
-    font-size: 1.2em;
-    text-align: start;
-    color: var(--main-medium);
+body h1, body h2 {
+  font-family: 'Anton', sans-serif;
 }
 
-blockquote{
-    font-size: 0.9em;
-    text-align: center;
-    font-weight: 600;
+body h2 {
+  font-size: 1.2em;
+  text-align: start;
+  color: var(--main-medium);
 }
 
-section{
-    background-color: #dbd7d7be;
-    padding: 3% 3% 2% 3%;
-    margin: 2% 2%;
+body blockquote {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+body section {
+  background-color: #dbd7d7be;
+  padding: 3% 3% 2% 3%;
+  margin: 2% 2%;
 }
 
 /*header*/
-header{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: #dbd7d7be;
-    z-index: 10;
-    padding: 0.5em;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #dbd7d7be;
+  z-index: 10;
+  padding: 0.5em;
 }
 
-a.beggining{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+header a.beggining {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
 }
 
-
-img.logo{
-    width: 40px;
-    display: inline-block;
+header a.beggining img.logo {
+  width: 40px;
+  display: inline-block;
 }
 
-header a h1{
-    font-size: 2em;
-    display: inline-block;
-    padding-left: 4px;
-    color: var(--main-dark);
+header a.beggining h1 {
+  font-size: 2em;
+  display: inline-block;
+  padding-left: 4px;
+  color: var(--main-dark);
 }
 
-header a h1:hover{
-    color: var(--main-medium);
-    cursor: pointer;
+header a.beggining h1:hover {
+  color: var(--main-medium);
+  cursor: pointer;
 }
 
-.menu{
-    position: relative;
-    display: inline-block;
-    padding-right: 4px;
-    text-decoration: none;
-    cursor: pointer;
+/*NavBarSmall Viewports*/
+.menu {
+  position: relative;
+  display: inline-block;
+  padding-right: 4px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.dropdown{
-    display: none;
-    position: absolute;
-    background-color: #dbd7d7be;
-    width: 80px;
-    padding: 8px 8px;
-    z-index: 10;
-    right: -7px;
+.menu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #dbd7d7be;
+  width: 80px;
+  padding: 8px 8px;
+  z-index: 10;
+  right: -7px;
 }
 
-.menu ul a{
-   text-decoration: none;   
-    color: var(--main-medium);
+.menu ul a {
+  text-decoration: none;
+  color: var(--main-medium);
 }
 
-.menu i{
-    color: var(--main-medium);
+.menu i {
+  font-size: 1.5em;
+  color: var(--main-medium);
 }
 
-.menu:hover .dropdown{
-    display: block;
+.menu li {
+  list-style: none;
+  font-size: 0.8em;
 }
 
-.dropdown li{
-    list-style: none;
-    font-size: 0.8em;
-    font-weight: 600;
+.menu li:hover {
+  background-color: var(--main-medium);
+  color: var(--main-lighter);
 }
 
-.dropdown li:hover{
-    background-color: var(--main-medium);
-    color: var(--main-lighter);
+.menu:hover .dropdown {
+  display: block;
 }
 
-.nav-bar{
-    display: none;
+/*NavBar Large Viewports*/
+.nav-bar {
+  display: none;
 }
+
 /*main*/
 /*presentation*/
-.presentation{
-    display: flex;
-    flex-direction: column;
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-img.team{
-    width: 250px;
-    height: 150px;
-    margin: auto;
-    display: block;
-    padding-bottom: 3%;
+.presentation img.team {
+  width: 250px;
+  height: 150px;
+  margin: auto;
+  display: block;
+  padding-bottom: 3%;
 }
 
 /*missions*/
-.missions{
-    display: flex;
-    flex-direction: column;
+.missions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.missions iframe{
-    margin: auto;
-    display: block;
-    width: 250px;
-    height: 150px;
+.missions iframe {
+  margin: auto;
+  display: block;
+  width: 250px;
+  height: 150px;
 }
 
-/*advantages*/
-.strenghts-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+/*strenghts*/
+.strenghts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.strenght{
-    display: flex;
-    flex-direction: column;
-    padding: 1%;
+.strenghts-container .strenght {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1%;
 }
 
-.strenght img{
-    display: block;
-    margin: auto;
-    width: 20px;
+.strenghts-container .strenght img {
+  display: block;
+  margin: auto;
+  width: 20px;
 }
 
-.strenght h3{
-    font-size: 0.6em;
-    font-weight: 700;
-    text-align: center;
+.strenghts-container .strenght h3 {
+  font-size: 0.6em;
+  text-align: center;
 }
 
-.strenght p{
-    font-size: 0.5em;
-    font-weight: 600;
+.strenghts-container .strenght p {
+  font-size: 0.5em;
 }
 
-/*opiniones*/
-.cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/*opinions*/
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.card{
-    width: 8rem;
-    height: 220px;
-    margin: 1%;
+.cards .card {
+  width: 8rem;
+  height: 220px;
+  margin: 1%;
 }
 
-.card blockquote{
-    font-size: 0.5em;
+.cards .card blockquote {
+  font-size: 0.5em;
 }
 
 /*information*/
-.final{
-    display: flex;
-    flex-direction: row;
-    padding: 2%;
-    background-color: var(--main-medium);
-    justify-content: space-around;
+.final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2%;
+  background-color: var(--main-medium);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.information i, .information address, .information a{
-    font-size: 0.5em;
-    font-weight: 600;
-    display: inline;
-    text-decoration: none;
-    color: var(--main-lighter);
-    cursor: pointer;
+.final iframe {
+  width: 140px;
+  height: 100px;
 }
 
-.information a:hover{
-    transform: scale(3, 0.5);
-    color: var(--main-dark);
+.final .information i, .final .information address, .final .information a {
+  font-size: 0.5em;
+  display: inline;
+  text-decoration: none;
+  color: var(--main-lighter);
+  cursor: pointer;
 }
 
-iframe{
-    width: 140px;
-    height: 100px;
+.final .information a:hover {
+  color: var(--main-dark);
 }
 
 /*footer*/
-footer{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 1%;
-    width: 100%;
-    height: 20px;
-    margin: 0;
-    background-color: #2c1919da;
-    color: var(--main-lighter);
-    font-size: 0.8em;
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1%;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  background-color: #2c1919da;
+  color: var(--main-lighter);
+  font-size: 0.8em;
 }
 
 /*contact form*/
-.one-form{
-    display: none;
+.form-container {
+  background-color: var(--main-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+  margin: 10%;
 }
 
-.form-container{
-    background-color: var(--main-light);
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    margin: 10%;
+.form-container label {
+  display: block;
 }
 
-label{
-    display: block;
+.form-container label input {
+  width: 180px;
+  background-color: var(--main-lighter);
+  border: solid var(--main-lighter) 1px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  display: block;
 }
 
-label h3, .inquiry, a h3, input, textarea{
-    font-size: 0.8em;
-    margin-bottom: 1%;
-    font-weight: 600;
-    text-align: center;
-    color: var(--main-dark);
+.form-container label .submit {
+  background-color: var(--main-medium);
+  color: var(--main-lighter);
+  width: 100px;
+  border: none;
+  -webkit-box-shadow: 2px -2px var(--main-lighter);
+          box-shadow: 2px -2px var(--main-lighter);
+  margin-top: 10%;
 }
 
-.form-container h2, .form-container2 h2{
-    text-align: center;
-    font-size: 1.5em;
+.form-container label textarea {
+  width: 180px;
+  background-color: var(--main-lighter);
+  border: solid var(--main-lighter) 1px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  display: block;
 }
 
-input, textarea{
-    width: 180px;
-    background-color: var(--main-lighter);
-    border: solid var(--main-lighter) 1px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    margin: auto;
-    display: block;
-    margin-bottom: 5%;
+.form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
+  font-size: 0.8em;
+  margin-bottom: 1%;
+  text-align: center;
+  color: var(--main-dark);
 }
 
-.submit{
-    background-color: var(--main-medium);
-    color: var(--main-lighter);
-    width: 100px;
-    border: none;
-    box-shadow: 2px -2px var(--main-lighter);
+.one-form {
+  display: none;
+}
+
+.form-container h2, .form-container2 h2 {
+  text-align: center;
+  font-size: 1.5em;
 }
 
 /*login form*/
-.one-form{
-    display: block;
+.one-form {
+  display: block;
 }
 
-.login img{
-    margin: auto;
-    display: block;
-    width: 120px;
+.login img {
+  margin: auto;
+  display: block;
+  width: 120px;
 }
 
-.login a{
-    text-decoration: none;
-    cursor: pointer;
+.login a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*mediaqueries*/
-@media screen and (min-width: 321px) and (max-width: 480px){
-    h2{
-        font-size: 1.7em;
-    }
-
-    blockquote{
-        font-size: 1em;
-    }
-
-    img.logo{
-        width: 50px;
-    }
-
-    header a h1{
-        font-size: 2.5em;
-    }
-
-    .dropdown li{
-        font-size: 1.2em;
-    }
-
-    img.team{
-        width: 300px;
-        height: 200px;
-    }
-
-    .missions iframe{
-        width: 300px;
-        height: 200px;
-    }
-
-    .form-container h2, .form-container2 h2{
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  body h2 {
+    font-size: 1.7em;
+  }
+  body blockquote {
+    font-size: 1em;
+  }
+  header a.beggining img.logo {
+    width: 50px;
+  }
+  header a.beggining h1 {
+    font-size: 2.5em;
+  }
+  .menu li {
+    font-size: 1.2em;
+  }
+  .presentation img.team {
+    width: 300px;
+    height: 200px;
+  }
+  .missions iframe {
+    width: 300px;
+    height: 200px;
+  }
+  .strenghts-container .strenght img {
+    width: 30px;
+  }
+  .strenghts-container .strenght h3 {
+    font-size: 1em;
+  }
+  .strenghts-container .strenght p {
+    font-size: 0.7em;
+  }
+  .form-container h2, .form-container2 h2 {
     text-align: center;
     font-size: 2em;
-    }
-
-    label h3, .inquiry, a h3, input, textarea {
+  }
+  .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
     font-size: 1.3em;
-    }
-
-    .login img{
+  }
+  .login img {
     width: 150px;
-    }
+  }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
-    h2{
-        font-size: 2.5em;
-    }
-
-    blockquote{
-        font-size: 1.7em;
-    }
-
-    img.logo{
-        width: 70px;
-    }
-
-    header a h1{
-        font-size: 3em;
-    }
-
-    .dropdown{
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body h2 {
+    font-size: 2.5em;
+  }
+  body blockquote {
+    font-size: 1.7em;
+  }
+  header a.beggining img.logo {
+    width: 70px;
+  }
+  header a.beggining h1 {
+    font-size: 3em;
+  }
+  .menu .dropdown {
     width: 100px;
     padding: 8px 8px;
     right: -4px;
-}
-
-    .dropdown li{
-        font-size: 1.8em;
-    }
-
-    .menu i{
-        font-size: 2.5em;
-    }
-
-    img.team{
-        width: 700px;
-        height: 400px;
-    }
-
-    .missions iframe{
-        width: 600px;
-        height: 350px;
-    }
-
-    .contact{
-        width: 600px;
-        display: flex;
-        justify-content: center;
-        margin: 10%;
-    }
-
-    .one-form{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 5%;
-    }
-
-    .form-container{
-        padding: 5%;
-        margin: 1%;
-    }
-
-    .form-container h2, .form-container2 h2{
-        text-align: center;
-        font-size: 2em;
-    }
-
-    label h3, .inquiry, a h3, input, textarea {
-        font-size: 1.3em;
-    }
-
-    input, textarea{
-        width: 280px;
-    }
-
-    .login img{
+  }
+  .menu li {
+    font-size: 1.8em;
+  }
+  .menu i {
+    font-size: 2.5em;
+  }
+  .presentation img.team {
+    width: 600px;
+    height: 380px;
+  }
+  .missions iframe {
+    width: 600px;
+    height: 350px;
+  }
+  .strenghts-container .strenght img {
+    width: 50px;
+  }
+  .strenghts-container .strenght h3 {
+    font-size: 1.5em;
+  }
+  .strenghts-container .strenght p {
+    font-size: 1em;
+  }
+  .cards .card {
+    width: 13rem;
+    height: 370px;
+  }
+  .cards .card blockquote {
+    font-size: 1em;
+  }
+  .final .information i, .final .information address, .final .information a {
+    font-size: 1.5em;
+  }
+  .final iframe {
+    width: 250px;
+    height: 200px;
+  }
+  footer {
+    font-size: 1.5em;
+    height: 30px;
+  }
+  .contact {
+    width: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    display: block;
+  }
+  .one-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5%;
+  }
+  .form-container {
+    padding: 3%;
+  }
+  .form-container h2, .form-container2 h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
+    font-size: 1.3em;
+  }
+  .form-container label input, .form-container label textarea {
+    width: 280px;
+  }
+  .login img {
     width: 150px;
-    }
-
-    .card{
-        width: 13rem;
-        height: 370px;
-    }
-
-    .card blockquote{
-        font-size: 1em;
-    }
-
-    .information i, .information address, .information a{
-        font-size: 1.5em;
-    }
-
-    iframe{
-        width: 250px;
-        height: 200px;
-    }
-
-    footer{
-        font-size: 2.2em;
-        height: 60px;
-    }
+  }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1920px){
-    h2{
-        font-size: 4em;
-    }
-
-    blockquote{
-        font-size: 2.2em;
-    }
-
-    img.logo{
-        width: 80px;
-    }
-
-    header a h1{
-        font-size: 5em;
-    }
-
-    .menu{
-        display: none;
-    }
-
-    .nav-bar{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .nav-bar a{
-        list-style: none;
-        text-decoration: none;
-        color: var(--main-medium);
-        font-size: 2em;
-    }
-
-    .nav-bar li{
-        padding-right: 20px;
-    }
-
-    img.team{
-        width: 900px;
-        height: 500px;
-    }
-
-    .missions iframe{
-        width: 900px;
-        height: 600px;
-    }
-
-    .contact{
-        width: 400px;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-
-    .one-form{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    .form-container{
-        padding: 5%;
-        margin: 5px;
-    }
-
-    .form-container h2, .form-container2 h2{
-        text-align: center;
-        font-size: 2.5em;
-    }
-
-    label h3, .inquiry, a h3, input, textarea {
-        font-size: 1em;
-    }
-
-    input, textarea{
-        width: 200px;
-    }
-
-    .submit{
-        width: 100px;
-    }
-
-    .login img{
+@media screen and (min-width: 769px) and (max-width: 1920px) {
+  body h2 {
+    font-size: 4em;
+  }
+  body blockquote {
+    font-size: 2.2em;
+  }
+  header a.beggining img.logo {
+    width: 80px;
+  }
+  header a.beggining h1 {
+    font-size: 5em;
+  }
+  .menu {
+    display: none;
+  }
+  .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-bar a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-medium);
+    font-size: 2em;
+  }
+  .nav-bar li {
+    padding-right: 20px;
+  }
+  .presentation img.team {
+    width: 900px;
+    height: 500px;
+  }
+  .missions iframe {
+    width: 900px;
+    height: 600px;
+  }
+  .strenghts-container .strenght img {
+    width: 100px;
+  }
+  .strenghts-container .strenght h3 {
+    font-size: 2.8em;
+  }
+  .strenghts-container .strenght p {
+    font-size: 1.8em;
+  }
+  .cards .card {
+    width: 25rem;
+    height: 500px;
+  }
+  .cards .card blockquote {
+    font-size: 1.4em;
+  }
+  .final .information i, .final .information address, .final .information a {
+    font-size: 2em;
+  }
+  .final iframe {
+    width: 400px;
+    height: 200px;
+  }
+  footer {
+    font-size: 1.5em;
+    height: 30px;
+  }
+  .contact {
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+  }
+  .one-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .form-container {
+    padding: 5%;
+    margin: 5px;
+  }
+  .form-container h2, .form-container2 h2 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .form-container label h3, .form-container .inquiry, .form-container a h3, .form-container input, .form-container textarea {
+    font-size: 1em;
+  }
+  .form-container input, .form-container textarea {
+    width: 200px;
+  }
+  .form-container label .submit {
+    width: 100px;
+  }
+  .login img {
     width: 150px;
-    }
-
-    .card{
-        width: 25rem;
-        height: 480px;
-    }
-
-    .card blockquote{
-        font-size: 1.3em;
-    }
-
-    .information i, .information address, .information a{
-        font-size: 1.5em;
-    }
-
-    iframe{
-        width: 400px;
-        height: 200px;
-    }
-
-    footer{
-        font-size: 1.5em;
-        height: 40px;
-    }
+  }
 }
+/*# sourceMappingURL=style.css.map */
